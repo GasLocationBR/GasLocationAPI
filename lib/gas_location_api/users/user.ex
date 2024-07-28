@@ -22,7 +22,7 @@ defmodule GasLocationApi.Users.User do
     |> cast(params, @required_params)
     |> validate_required(@required_params)
     |> validate_length(:first_name, min: 3)
-    |> validate_length(:last_name, min: 4)
+    |> validate_length(:last_name, min: 3)
     |> validate_format(:email, ~r/@/)
     |> add_password_hash()
   end
