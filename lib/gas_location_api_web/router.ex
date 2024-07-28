@@ -7,6 +7,8 @@ defmodule GasLocationApiWeb.Router do
 
   scope "/api", GasLocationApiWeb do
     pipe_through :api
+
+    resources "/users", UsersController, only: [:create, :update, :delete, :show]
   end
 
   # Enable LiveDashboard in development
