@@ -1,6 +1,8 @@
 defmodule GasLocationApiWeb.UsersJSON do
   alias GasLocationApi.Users.User
 
+  def get(%{user: user}), do: %{data: data(user)}
+
   def create(%{user: user}) do
     %{
       message: "Usuário criado com sucesso",
